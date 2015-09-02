@@ -7,11 +7,11 @@
 #
 
 # path to a directory with all packages
-storage: /home/sinopia/storage
+storage: /sinopia/storage
 
 auth:
   htpasswd:
-    file: /home/sinopia/storage/htpasswd
+    file: /sinopia/storage/htpasswd
     # Maximum amount of users allowed to register, defaults to "+inf".
     # You can set this to -1 to disable registration.
     #max_users: 1000
