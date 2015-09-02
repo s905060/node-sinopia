@@ -15,7 +15,7 @@ ENV SINOPIA_DATA_DIR /root/sinopia/storage
 # Install Sinopia
 RUN \
     npm install sinopia && \
-    mkdir -p ${SINOPIA_DATA_DIR} &&
+    mkdir -p ${SINOPIA_DATA_DIR}
 
 # Adding the run file
 ADD config.yaml /root/.config/sinopia/config.yaml
