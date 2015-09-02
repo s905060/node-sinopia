@@ -9,6 +9,9 @@
 # path to a directory with all packages
 storage: /sinopia/storage
 
+# you can specify listen address (or simply a port)
+listen: 0.0.0.0:4873
+
 auth:
   htpasswd:
     file: /sinopia/storage/htpasswd
