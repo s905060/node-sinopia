@@ -11,11 +11,13 @@ MAINTAINER "Jash Lee" <s905060@gmail.com>
 
 # Set env variables
 ENV SINOPIA_DATA_DIR /root/sinopia/storage
+ENV SINOPIA_CONF_DIR /root/.config/sinopia
 
 # Install Sinopia
 RUN \
     npm install sinopia && \
-    mkdir -p ${SINOPIA_DATA_DIR}
+    mkdir -p ${SINOPIA_DATA_DIR} && \
+    mkdir -p ${SINOPIA_CONF_DIR}
 
 # Adding the run file
 ADD config.yaml /root/.config/sinopia/config.yaml
