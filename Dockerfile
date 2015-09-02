@@ -14,7 +14,7 @@ ENV SINOPIA_DATA_DIR /root/sinopia/storage
 
 # Install Sinopia
 RUN \
-    npm install sinopia \
+    npm install sinopia && \
     mkdir -p ${SINOPIA_DATA_DIR} &&
 
 # Adding the run file
