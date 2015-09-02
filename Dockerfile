@@ -9,10 +9,6 @@ FROM centos:centos6
 # File Author / Maintainer
 MAINTAINER "Jash Lee" <s905060@gmail.com>
 
-# Set env variables
-ENV SINOPIA_DIR /sinopia
-ENV SINOPIA_DATA /sinopia/storage
-
 # Clean up yum repos to save spaces
 RUN yum update -y >/dev/null
 
@@ -21,11 +17,6 @@ RUN yum -y install epel-release
 
 # Install nodejs && npm
 RUN yum -y install git nodejs npm --enablerepo=epel
-
-# Make Sinopia directory
-RUN \
-    mkdir -p ${SINOPIA_DIR} && \
-    mkdir -p ${SINOPIA_DATA}
 
 # Sinopia Version / Path / Backup
 ENV version v1.4.0
