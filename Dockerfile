@@ -24,6 +24,7 @@ RUN useradd -ms /bin/bash ${USER}
 ENV WORK_PATH /home/${USER}/sinopia
 
 USER ${USER}
+WORKDIR ${WORK_PATH}
 
 # Sinopia Version / Path / Backup
 ENV version v1.4.0
