@@ -29,4 +29,4 @@ EXPOSE 4873
 VOLUME ["/root/.config/sinopia/config.yaml", "/root/sinopia/storage"]
 
 # Start the Sinopia service
-CMD ["./bin/sinopia"]
+CMD ["sinopia"]
