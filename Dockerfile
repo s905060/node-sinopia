@@ -36,7 +36,7 @@ ADD config.yaml /sinopia/config.yaml
 EXPOSE 4873
 
 # Mounted config
-VOLUME ["/sinopia/storage"]
+VOLUME ["/sinopia/config.yaml", "/sinopia/storage"]
 
 # Start the Sinopia service
 CMD ["./bin/sinopia"]
