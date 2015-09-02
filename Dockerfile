@@ -13,9 +13,14 @@ MAINTAINER "Jash Lee" <s905060@gmail.com>
 ENV SINOPIA_DIR /sinopia
 ENV SINOPIA_DATA /sinopia/storage
 
-# Install nodejs && npm
+# Clean up yum repos to save spaces
+RUN yum update -y >/dev/null
+
+# Install epel
 RUN yum -y install epel-release
-RUN yum -y install nodejs npm --enablerepo=epel
+
+# Install nodejs && npm
+RUN yum -y install git nodejs npm --enablerepo=epel
 
 # Make Sinopia directory
 RUN \
